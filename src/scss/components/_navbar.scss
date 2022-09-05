@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__menu-item {
+    margin: 0.5rem 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.nav-item {
+  text-transform: uppercase;
+}
+
+.navbar-logo {
+  height: 24px;
+  line-height: 1;
+  img {
+    image-rendering: high-quality;
+  }
+}
+
+.nav-link {
+  color: inherit;
+}

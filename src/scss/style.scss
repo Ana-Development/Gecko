@@ -1,27 +1,6 @@
-@mixin font($font_name, $file_name, $weight, $style) {
-    @font-face {
-    font-family: $font_name;
-    font-display: swap;
-    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-    font-weight: #{$weight};
-    font-style: #{$style};
-    }
-}
-
-@mixin light {
-    font-family: 'Gotham Pro Light', Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-}
-@mixin regular {
-    font-family: 'Gotham Pro', Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-}
-
-@import "reset";
-@import "normalize";
+@import "utils";
 @import "fonts";
+@import "components";
 
 body {
     @include light;
@@ -37,40 +16,6 @@ body {
 .container {
     max-width: 1140px;
     margin: 0 auto;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    align-items: center;
-    &__menu {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
-    &__menu-item {
-        margin: 0.5rem 1rem;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-}
-
-.nav-item {
-    text-transform: uppercase;
-}
-
-.navbar-logo {
-    height: 24px;
-    line-height: 1;
-    img {
-        image-rendering: high-quality;
-    }
-}
-
-.nav-link {
-    color: inherit;
 }
 
 .title {
@@ -117,10 +62,6 @@ p {
     .back-2-img {
         top: 490px;
     }
-}
-
-.products {
-
 }
 
 .card {
@@ -174,20 +115,3 @@ p {
     }
 }
 
-.about {
-    margin-top: 109px;
-    margin-bottom: 109px;
-
-    p {
-        font-family: 'Gotham Pro Light', Helvetica, sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 30px;
-    }
-
-    .about__title {
-        font-size: 24px;
-        line-height: 30px;
-    }
-}
