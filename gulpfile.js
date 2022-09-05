@@ -6,21 +6,21 @@ let path = {
     html: project_folder + '/',
     css: project_folder + '/css/',
     js: project_folder + '/js/',
-    img: project_folder + '/img/',
-    fonts: project_folder + '/fonts/'
+    img: project_folder + '/assets/img/',
+    fonts: project_folder + '/assets/fonts/'
   },
   src: {
     html: [source_folder + '/*.html', "!" + source_folder + '/_*.html'],
     css: source_folder + '/scss/style.scss',
     js: source_folder + '/js/script.js',
-    img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
-    fonts: source_folder + '/fonts/*.ttf'
+    img: source_folder + '/assets/img/**/*.{jpg,png,svg,gif,ico,webp}',
+    fonts: source_folder + '/assets/fonts/*.ttf'
   },
   watch: {
     html: source_folder + '/**/*.html',
     css: source_folder + '/scss/**/*.scss',
     js: source_folder + '/js/**/*.js',
-    img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}'
+    img: source_folder + '/assets/img/**/*.{jpg,png,svg,gif,ico,webp}'
   },
   clean: './' + project_folder + '/'
 }
@@ -143,11 +143,11 @@ function fonts(params) {
 };
 
 gulp.task('otf2ttf', function () {
-  return gulp.src([source_folder + '/fonts/*.otf'])
+  return gulp.src([source_folder + '/assets/fonts/*.otf'])
     .pipe(fonter({
       formats: ['ttf']
     }))
-    .pipe(dest(source_folder + '/fonts/'))
+    .pipe(dest(source_folder + '/assets/fonts/'))
 });
 
 gulp.task('svgSprite', function () {
