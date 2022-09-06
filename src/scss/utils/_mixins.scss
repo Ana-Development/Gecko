@@ -13,8 +13,15 @@
   font-style: normal;
   font-weight: 400;
 }
+
 @mixin regular {
   font-family: 'Gotham Pro', Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
+}
+
+@mixin bold {
+  font-family: 'Gotham Pro Bold', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }

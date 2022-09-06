@@ -30,12 +30,14 @@ body {
 }
 
 .text-bold {
-    font-family: 'Gotham Pro Bold', Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 700;
+    @include bold;
     font-size: 24px;
     line-height: 25px;
     letter-spacing: 0.005em;
+}
+
+.text-white {
+    color: #FFFFFF;
 }
 
 p {
@@ -61,26 +63,6 @@ p {
     }
     .back-2-img {
         top: 490px;
-    }
-}
-
-.card {
-    width: 357px;
-    height: 550px;
-    border: 0;
-    border-radius: 0;
-    background: #F6F6F6;
-    .card-img-overlay {
-        border-radius: 0;
-        cursor: pointer;
-        &:hover {
-            background: #EFC2B3;
-            mix-blend-mode: multiply;
-        }
-    }
-    img {
-        margin-top: 85px;
-
     }
 }
 
