@@ -1,27 +1,54 @@
-<!--<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="../assets/img/slide_bg1.svg" class="d-block" alt="..." height="849">
-            <div class="carousel-caption d-none d-md-block p-0">
-                <img src="../assets/img/logo_rastr.png" class="carousel__logo d-block mx-auto" alt="...">
-                <p class="carousel-caption__label p-4">СОЗДАН ДЛЯ ТОГО, ЧТОБЫ ТВОЯ КОЖА СКАЗАЛА ТЕБЕ СПАСИБО</p>
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel__inner">
+        <div class="carousel__item active">
+            <img src="../assets/img/slide_bg1.svg" class="carousel__item-img" alt="Slide 1">
+            <div class="carousel__caption">
+                <img src="../assets/img/logo_rastr.svg" class="carousel__logo" alt="Carousel Gecko Logo">
+                <p class="carousel__caption-label p-4">СОЗДАН ДЛЯ ТОГО, ЧТОБЫ ТВОЯ КОЖА СКАЗАЛА ТЕБЕ СПАСИБО</p>
             </div>
         </div>
-        <div class="carousel-item">
-            <img src="../assets/img/slide_bg1.svg" class="d-block" alt="..." height="849">
+        <div class="carousel__item">
+            <img src="../assets/img/photo_products_all_2_1.png" alt="Slide 2">
         </div>
-        <div class="carousel-item">
-            <img src="../assets/img/slide_bg1.svg" class="d-block" alt="..." height="849">
+        <div class="carousel__item">
+            <img src="../assets/img/slide_bg1.svg" alt="Slide 3">
+        </div>
+        <div class="carousel__item">
+            <img src="../assets/img/slide_bg1.svg" alt="Slide 4">
+        </div>
+        <div class="carousel__indicators">
+            <button type="button" data-bs-target="" onclick="currentDiv(1)"></button>
+            <button type="button" data-bs-target="" onclick="currentDiv(2)"></button>
+            <button type="button" data-bs-target="" onclick="currentDiv(3)"></button>
+            <button type="button" data-bs-target="" onclick="currentDiv(4)"></button>
         </div>
     </div>
 
-    @@include('_carousel.html')  -->
     @@include('_about.html')
     @@include('_products.html')
 </div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("carousel__item");
+        var dots = document.querySelectorAll(".carousel__indicators button");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        x[slideIndex-1].style.display = "flex";
+        dots[slideIndex-1].className += " active";
+    }
+</script>

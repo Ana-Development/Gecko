@@ -1,4 +1,52 @@
 .swiper {
   width: 1140px;
   height: 849px;
+
+  &-slide {
+    display: none;
+  }
+}
+
+.carousel {
+  &__caption {
+    position: absolute;
+    top: 70px;
+    picture {
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__inner {
+    position: relative;
+    height: 850px;
+  }
+  &__indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+    list-style: none;
+  }
+}
+
+.carousel__item {
+  display: none;
+  &.active {
+    display: flex;
+    justify-content: center;
+  }
+  &-img {
+    width: 100vw;
+    height: 849px;
+  }
 }

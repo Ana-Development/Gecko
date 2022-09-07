@@ -1,3 +1,22 @@
+@use "sass:list";
+
+$card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
+
+@mixin apply-overlay-color($num) {
+  .product__card_active:hover .card-img-overlay,
+  .card-img-overlay:hover {
+    background-color: list.nth($card-overlay-colors, $num);
+  }
+}
+
+@mixin card-overlay-color($num, $offset) {
+    @if $num > 0 {
+      &:nth-child(#{$num}) {
+        @include apply-overlay-color($num + $offset);
+      }
+    }
+}
+
 .products {
   &__title {
     @include light;
@@ -7,6 +26,17 @@
   }
   &__col {
     width: 367px;
+    margin-bottom: 56px;
+  }
+  &__line:nth-child(1) &__col {
+    @for $i from 1 through 3 {
+      @include card-overlay-color($i, 0);
+    }
+  }
+  &__line:nth-child(2) &__col {
+    @for $i from 1 through 3 {
+      @include card-overlay-color($i, 3);
+    }
   }
   &__line {
     display: flex;
@@ -20,7 +50,6 @@
       background-color: #fff;
       background-clip: border-box;
       border: 1px solid rgba(0, 0, 0, 0.125);
-      border-radius: .25rem;
 
       &-img-overlay {
         position: absolute;
@@ -34,21 +63,22 @@
       }
       &-title {
         position: absolute;
-        top: 0;
+        top: 57px;
         z-index: 10000;
         font-size: 32px;
         line-height: 31px;
-        padding: 40px;
+        padding: 0 40px 40px;
         text-align: center;
       }
       &-text {
         @include bold;
         position: absolute;
-        top: 160px;
+        top: 150px;
         z-index: 10000;
         font-size: 20px;
         line-height: 25px;
         text-align: center;
+        padding: 0 0.5rem;
       }
     }
   }
@@ -58,14 +88,41 @@
   &__card {
     width: 357px;
     height: 550px;
+    margin-bottom: 20px;
+  }
+  &__sub-title {
+    @include regular;
+    font-size: 24px;
+    line-height: 23px;
+    padding: 0.5rem 0;
+  }
+  &__more-block {
+    position: absolute;
+    z-index: 10000;
+    bottom: 109px;
+    background-color: #FFFFFF;
+    border: 0;
+  }
+  &__more-btn {
+    @include light;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    border: 0;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem 0 1rem;
+    background-color: inherit;
   }
   &__card_active {
+    @include regular;
+    display: flex;
+    justify-content: center;
     opacity: 0;
     &:hover {
       opacity: 1;
       cursor: pointer;
       .card-img-overlay {
-          background: #EFC2B3;
           mix-blend-mode: multiply;
       }
     }
