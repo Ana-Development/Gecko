@@ -1,0 +1,39 @@
+.newsletters {
+  background: #F6F6F6;
+  &__inner {
+    display: flex;
+  }
+  &__title {
+    display: block;
+    padding-top: 25%;
+    padding-bottom: 1rem;
+  }
+  &__text {
+    font-size: 20px;
+    line-height: 19px;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  &__subscribe-btn {
+    display: block;
+    background: #FFFFFF;
+    width: 100%;
+    border: 1px solid #EEEEEE;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    span {
+      text-align: start;
+      display: block;
+    }
+  }
+}
+
+.h2 {
+  @include light;
+  font-size: 32px;
+  line-height: 31px;
+}
+
+.wrapper {
+  max-width: 90%;
+}
