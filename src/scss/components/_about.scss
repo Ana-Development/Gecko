@@ -1,5 +1,7 @@
 .about {
-  margin-bottom: 109px;
+  &__inner {
+    margin-bottom: 109px;
+  }
 
   p {
     @include light;

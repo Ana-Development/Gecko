@@ -1,0 +1,23 @@
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-width-100 {
+  flex-basis: 100%;
+}
+
+.flex-width-50 {
+  flex-basis: 50%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}

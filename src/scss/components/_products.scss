@@ -84,26 +84,24 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
   }
 }
 
-.product {
-  &__card {
+.products__card {
     width: 357px;
     height: 550px;
     margin-bottom: 20px;
-  }
-  &__sub-title {
+  &-sub-title {
     @include regular;
     font-size: 24px;
     line-height: 23px;
     padding: 0.5rem 0;
   }
-  &__more-block {
+  &-more-block {
     position: absolute;
     z-index: 10000;
     bottom: 109px;
     background-color: #FFFFFF;
     border: 0;
   }
-  &__more-btn {
+  &-more-btn {
     @include light;
     font-size: 20px;
     line-height: 25px;
@@ -114,7 +112,7 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
     padding: 0.5rem 1rem 0 1rem;
     background-color: inherit;
   }
-  &__card_active {
+  &_active {
     @include regular;
     display: flex;
     justify-content: center;
@@ -127,7 +125,7 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
       }
     }
   }
-  &__card-img {
+  &-img {
     margin-top: 85px;
   }
 }
