@@ -1,12 +1,14 @@
 .about {
-  margin-top: 109px;
   margin-bottom: 109px;
 
   p {
     @include light;
     font-size: 24px;
     line-height: 30px;
-    margin-bottom: 1rem;
+    &:first-child {
+      padding-top: 3.875em;
+      padding-bottom: 3.875em;
+    }
   }
 
   &__title {
@@ -15,7 +17,8 @@
   }
 
   &__top-block {
-    margin-bottom: 100px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   &__img {

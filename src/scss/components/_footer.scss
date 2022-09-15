@@ -1,0 +1,132 @@
+@use "sass:list";
+
+@mixin footer-menu-item-color($num) {
+  @if $num > 0 {
+    &:nth-child(#{$num}) {
+      color: list.nth($card-overlay-colors, list.length($card-overlay-colors) +1 - $num);
+    }
+  }
+}
+
+.footer {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+  }
+  &__menu {
+    margin-bottom: 1rem;
+    &__list {
+      display: flex;
+    }
+    &__item {
+      margin-left: 1rem;
+    }
+    .products__menu__list {
+      flex-direction: column;
+      align-items: flex-end;
+      .footer__menu__item {
+        @for $i from 1 through 6 {
+          @include footer-menu-item-color($i);
+        }
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        a {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  &__col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  &__main-logo {
+    margin-bottom: 2rem;
+  }
+  &__contacts {
+    font-size: 20px;
+    line-height: 19px;
+    &__phone {
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    margin-top: 70px;
+    margin-bottom: 15px;
+  }
+  &__copyright-block {
+    @include medium;
+    font-size: 18px;
+    padding-top: 12px;
+    line-height: 1;
+    padding-bottom: 5px;
+    margin-bottom: 82px;
+    background-color: #000000;
+    color: #F4F4F4;
+  }
+  &__left-block {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-basis: 50%;
+  }
+  &__right-block {
+    flex-basis: 50%;
+  }
+}
+
+.socials {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+  &.instagram-icon {
+    background-image: url("../../assets/img/inst_icon.svg");
+  }
+  &.vk-icon {
+    background-image: url("../../assets/img/vk_icon.svg");
+  }
+}
+
+.socials__menu__list {
+  align-items: flex-end;
+  .footer__menu__item {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 18px;
+    padding-top: 1em;
+    padding-bottom: 1rem;
+  }
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-width-100 {
+  flex-basis: 100%;
+}
+
+.flex-width-50 {
+  flex-basis: 50%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}

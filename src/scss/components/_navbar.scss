@@ -7,9 +7,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-left: 0.5rem;
   }
   &__menu-item {
-    margin: 0.5rem 1rem 0 1rem;
+    margin: 0.5rem 18px 0 0;
     &:last-child {
       margin-right: 0;
     }

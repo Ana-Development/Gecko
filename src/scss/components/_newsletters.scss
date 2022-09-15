@@ -1,4 +1,7 @@
 .newsletters {
+  position: relative;
+  display: flex;
+  justify-content: center;
   background: #F6F6F6;
   &__inner {
     display: flex;
@@ -24,6 +27,24 @@
     span {
       text-align: start;
       display: block;
+    }
+  }
+  &__chat-btn {
+    position: absolute;
+    bottom: 10%;
+    right: 5vw;
+    width: 255px;
+    height: 82px;
+
+    background: #1D1D1B;
+    border-radius: 48px;
+    border-style: none;
+    span {
+      @include bold;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 100%;
+      color: #F4F4F4;
     }
   }
 }

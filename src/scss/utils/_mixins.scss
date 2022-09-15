@@ -26,3 +26,9 @@
   font-weight: 700;
 }
 
+@mixin medium {
+  font-family: 'Gotham Pro Medium', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
