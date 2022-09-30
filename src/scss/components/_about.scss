@@ -1,12 +1,13 @@
 .about {
   &__inner {
-    margin-bottom: 109px;
+    margin-bottom: 56px;
   }
 
   p {
     @include light;
     font-size: 24px;
     line-height: 30px;
+    padding-bottom: 30px;
     &:first-child {
       padding-top: 3.875em;
       padding-bottom: 3.875em;

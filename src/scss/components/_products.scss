@@ -3,7 +3,7 @@
 $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
 
 @mixin apply-overlay-color($num) {
-  .product__card_active:hover .card-img-overlay,
+  .products__card-info:hover .card-img-overlay,
   .card-img-overlay:hover {
     background-color: list.nth($card-overlay-colors, $num);
   }
@@ -45,11 +45,12 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
       position: relative;
       display: flex;
       flex-direction: column;
+      width: 100%;
       min-width: 0;
       word-wrap: break-word;
       background-color: #fff;
       background-clip: border-box;
-      border: 1px solid rgba(0, 0, 0, 0.125);
+      border: 1px solid rgba(0,0,0,.125);
 
       &-img-overlay {
         position: absolute;
@@ -112,7 +113,7 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
     padding: 0.5rem 1rem 0 1rem;
     background-color: inherit;
   }
-  &_active {
+  &-info {
     @include regular;
     display: flex;
     justify-content: center;

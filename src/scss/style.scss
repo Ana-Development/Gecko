@@ -44,24 +44,3 @@ p {
     letter-spacing: 0.005em;
 }
 
-.all-line {
-    position: relative;
-    height: 900px;
-    img {
-        position: absolute;
-        top: 0;
-        background-position: center;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: 100%;
-    }
-    .all-line-img {
-        top: 0.039vw;
-        z-index: 1000;
-        width: auto;
-    }
-    .back-2-img {
-        top: 490px;
-    }
-}
-
