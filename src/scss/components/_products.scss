@@ -48,9 +48,8 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
       width: 100%;
       min-width: 0;
       word-wrap: break-word;
-      background-color: #fff;
+      background-color: $main-color;
       background-clip: border-box;
-      border: 1px solid rgba(0,0,0,.125);
 
       &-img-overlay {
         position: absolute;
