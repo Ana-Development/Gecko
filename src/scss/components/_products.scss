@@ -23,24 +23,28 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
     font-size: 24px;
     line-height: 23px;
     margin-bottom: 3rem;
+    @media (max-width: 1140px) {
+      text-align: center;
+    }
   }
   &__col {
     width: 367px;
     margin-bottom: 56px;
-  }
-  &__line:nth-child(1) &__col {
-    @for $i from 1 through 3 {
-      @include card-overlay-color($i, 0);
+    margin-right: 19.5px;
+    @media (max-width: 1140px) {
+      flex-basis: calc(50% - 19.5px);
     }
   }
-  &__line:nth-child(2) &__col {
-    @for $i from 1 through 3 {
-      @include card-overlay-color($i, 3);
+  &__line:nth-child(1) &__col {
+    @for $i from 1 through 6 {
+      @include card-overlay-color($i, 0);
     }
   }
   &__line {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -19.5px;
     .card {
       position: relative;
       display: flex;
@@ -127,5 +131,8 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
   }
   &-img {
     margin-top: 85px;
+    @media (max-width: 1140px) {
+      //margin-left: -80px;
+    }
   }
 }

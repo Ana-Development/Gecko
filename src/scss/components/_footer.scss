@@ -1,4 +1,5 @@
 @use "sass:list";
+@use "sass:map";
 
 @mixin footer-menu-item-color($num) {
   @if $num > 0 {
@@ -67,6 +68,14 @@
   }
   &__right-block {
     flex-basis: 50%;
+  }
+  @media (max-width: map.get($grid-breakpoints, xl)) {
+    &__left-block {
+      flex-basis: 30%;
+    }
+    &__right-block {
+      flex-basis: 70%;
+    }
   }
 }
 

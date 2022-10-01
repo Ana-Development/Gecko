@@ -6,6 +6,11 @@
   &__inner {
     display: flex;
   }
+  &__col-inner {
+    @media (max-width: 1140px) {
+      margin-bottom: 132px;
+    }
+  }
   &__title {
     display: block;
     padding-top: 132px;
