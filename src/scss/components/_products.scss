@@ -23,7 +23,7 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
     font-size: 24px;
     line-height: 23px;
     margin-bottom: 3rem;
-    @media (max-width: 1140px) {
+    @media (max-width: 760px) {
       text-align: center;
     }
   }
@@ -33,6 +33,9 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
     margin-right: 19.5px;
     @media (max-width: 1140px) {
       flex-basis: calc(50% - 19.5px);
+    }
+    @media (max-width: 760px) {
+      flex-basis: inherit;
     }
   }
   &__line:nth-child(1) &__col {
