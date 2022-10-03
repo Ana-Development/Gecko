@@ -48,7 +48,7 @@
 
 .wrapper {
   max-width: 90%;
-  @media (max-width: 760px) {
+  @media (max-width: breakpoint('md')) {
     max-width: 100%;
   }
 }

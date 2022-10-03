@@ -24,7 +24,7 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
     line-height: 23px;
     padding-top: 3.5rem;
     padding-bottom: 3rem;
-    @media (max-width: 760px) {
+    @media (max-width: breakpoint('md')) {
       text-align: center;
     }
   }
@@ -135,7 +135,7 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
   }
   &-img {
     margin-top: 85px;
-    @media (max-width: 1140px) {
+    @media (max-width: breakpoint('xl')) {
       //margin-left: -80px;
     }
   }
