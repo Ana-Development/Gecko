@@ -3,10 +3,15 @@
 @import "fonts";
 @import "components";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     @include light;
     font-size: 16px;
     line-height: 15px;
+    scroll-behavior: smooth;
 }
 
 .header {
