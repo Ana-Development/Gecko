@@ -1,7 +1,8 @@
-@use "sass:map";
 @import "utils";
 @import "fonts";
 @import "components";
+
+$main-container-width: breakpoint('xl');
 
 html {
     scroll-behavior: smooth;
@@ -20,7 +21,7 @@ body {
 }
 
 .container {
-    max-width: 1140px;
+    max-width: breakpoint('xl');
     margin: 0 auto;
 }
 
@@ -52,8 +53,8 @@ p {
 
 .app__chat-btn {
     position: fixed;
-    bottom: max(calc(((100vw - 1140px)/2 - 255px)/2), 20px);
-    right: max(calc(((100vw - 1140px)/2 - 255px)/2), 20px);
+    bottom: max(calc(((100vw - #{$main-container-width})/2 - 255px)/2), 20px);
+    right: max(calc(((100vw - #{$main-container-width})/2 - 255px)/2), 20px);
     width: 255px;
     height: 82px;
     z-index: 10001;
@@ -70,7 +71,7 @@ p {
     }
 }
 
-@media (max-width: map.get($grid-breakpoints, sm)) {
+@media (max-width: breakpoint('sm')) {
     .app__chat-btn {
         width: 218px;
         height: 70px;
@@ -80,7 +81,7 @@ p {
     }
 }
 
-@media (max-width: map.get($grid-breakpoints, xl)) {
+@media (max-width: breakpoint('xl')) {
     .xl-d-none {
         display: none;
     }
@@ -89,21 +90,20 @@ p {
     }
 }
 
-@media (max-width: map.get($grid-breakpoints, lg)) {
+@media (max-width: breakpoint('lg')) {
     .container {
         max-width: 700px;
     }
 }
 
-@media (max-width: map.get($grid-breakpoints, md)) {
+@media (max-width: breakpoint('md')) {
     .container {
         max-width: 500px;
     }
 }
 
-@media (max-width: map.get($grid-breakpoints, sm)) {
+@media (max-width: breakpoint('sm')) {
     .container {
         max-width: 320px;
     }
 }
-

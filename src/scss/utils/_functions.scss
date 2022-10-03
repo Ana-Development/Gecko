@@ -1,0 +1,5 @@
+@use "sass:map";
+
+@function breakpoint($size) {
+  @return map.get($grid-breakpoints, $size);
+}

@@ -70,7 +70,7 @@
   color: inherit;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: breakpoint('xl')) {
   .navbar .hamburger-lines {
     display: flex;
   }

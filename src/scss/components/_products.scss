@@ -32,10 +32,10 @@ $card-overlay-colors: #EFC2B3 #FCD700 #2C2A25 #996C59 #B0B3B2 #5BB0BC;
     width: 367px;
     margin-bottom: 56px;
     margin-right: 19.5px;
-    @media (max-width: 1140px) {
+    @media (max-width: breakpoint('xl')) {
       flex-basis: calc(50% - 19.5px);
     }
-    @media (max-width: 760px) {
+    @media (max-width: breakpoint('md')) {
       flex-basis: inherit;
     }
   }

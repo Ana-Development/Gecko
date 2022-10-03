@@ -7,10 +7,10 @@
     display: flex;
   }
   &__col-inner {
-    @media (max-width: 1140px) {
+    @media (max-width: breakpoint('xl')) {
       margin-bottom: 132px;
     }
-    @media (max-width: 760px) {
+    @media (max-width: breakpoint('md')) {
       text-align: center;
     }
   }
