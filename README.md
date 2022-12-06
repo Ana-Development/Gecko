@@ -6,9 +6,9 @@
 
 Команды:<br>
 ```
-<b>gulp</b> - запуск<br>
-<b>gulp svgSprite</b> - конвертирование SVG<br>
-<b>gulp otf2ttf</b> - конвертирование шрифтов otf
+gulp - запуск<br>
+gulp svgSprite - конвертирование SVG<br>
+gulp otf2ttf - конвертирование шрифтов otf
 ```
 
 Возможно, понадобится доустановить плагин
