@@ -1,4 +1,4 @@
-# Gulp Чистая сборка
+# Gulp сборка
 
 Установка:
 1. git clone https://github.com/antonwp/Gulp.git
