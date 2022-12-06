@@ -4,10 +4,10 @@
 1. git clone https://github.com/antonwp/Gulp.git
 2. npm i
 
-Команды:<br>
+Команды:
 ```
-gulp - запуск<br>
-gulp svgSprite - конвертирование SVG<br>
+gulp - запуск
+gulp svgSprite - конвертирование SVG
 gulp otf2ttf - конвертирование шрифтов otf
 ```
 
