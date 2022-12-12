@@ -1,14 +1,14 @@
-# Gulp Чистая сборка
+# Gulp сборка
 
 Установка:
 1. git clone https://github.com/antonwp/Gulp.git
 2. npm i
 
-Команды:<br>
+Команды:
 ```
-<b>gulp</b> - запуск<br>
-<b>gulp svgSprite</b> - конвертирование SVG<br>
-<b>gulp otf2ttf</b> - конвертирование шрифтов otf
+gulp - запуск
+gulp svgSprite - конвертирование SVG
+gulp otf2ttf - конвертирование шрифтов otf
 ```
 
 Возможно, понадобится доустановить плагин
