@@ -1,0 +1,99 @@
+.partners__ {
+  &logo {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+}
+
+.partners__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  .partners__item {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 50%;
+    align-items: center;
+    border-top: 1px solid #939393;
+
+    &-group {
+      display: flex;
+      height: 82px;
+      align-items: center;
+
+      .partners__title {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .partners__title {
+    height: 43px;
+    @include light;
+    font-size: 40px;
+    line-height: 38px;
+    color: #2C2A25;
+    background-color: inherit;
+    margin-bottom: 148px;
+  }
+
+  .union-group {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    width: 55.54px;
+    height: 55.54px;
+    align-items: center;
+    border-radius:50%;
+    background: #939393;
+    transform: rotate(-180deg);
+  }
+}
+
+.collapsible {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  .icon_arrow {
+    display: block;
+    transform: rotate(180deg);
+  }
+  .icon_closed {
+    display: none;
+  }
+  &.icon_collapsed {
+    .icon_arrow {
+      display: none;
+    }
+    .icon_closed {
+      display: block;
+    }
+  }
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 50px 0;
+  display: none;
+  overflow: hidden;
+  font-family: 'Gotham Pro Light Italic', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+  ol {
+    list-style: decimal;
+    li {
+      display: list-item;
+      list-style-position: inside;
+      margin-bottom: 32px;
+    }
+  }
+}
