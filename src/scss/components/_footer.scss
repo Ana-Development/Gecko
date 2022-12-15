@@ -4,7 +4,7 @@
 @mixin footer-menu-item-color($num) {
   @if $num > 0 {
     &:nth-child(#{$num}) {
-      color: list.nth($card-overlay-colors, list.length($card-overlay-colors) +1 - $num);
+      color: list.nth($card-overlay-colors, list.length($card-overlay-colors) + 1 - $num);
     }
   }
 }

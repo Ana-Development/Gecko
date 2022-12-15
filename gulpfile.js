@@ -98,17 +98,6 @@ function css() {
     .pipe(browsersync.stream())
 }
 
-function vendorJS() {
-  const modules = [
-    'node_modules/swiper/swiper-bundle.min.js',
-    'node_modules/swiper/swiper-bundle.min.js.map',
-  ];
-
-  return src(modules)
-      .pipe(dest(path.build.js))
-      .pipe(browsersync.stream());
-};
-
 function js() {
   return gulp.src(path.src.js)
       .pipe(jsImport({
@@ -228,7 +217,7 @@ function clean(param) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, vendorJS, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
@@ -237,7 +226,6 @@ exports.images = images;
 exports.js = js;
 exports.css = css;
 exports.html = html;
-exports.vendorJS = vendorJS;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
