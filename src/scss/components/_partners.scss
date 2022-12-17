@@ -1,5 +1,6 @@
-.partners__ {
-  &logo {
+.partners {
+  background: #F6F6F6;
+  &__logo {
     margin-top: 100px;
     margin-bottom: 50px;
   }
@@ -82,18 +83,19 @@
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
-  padding: 50px 0;
   overflow: hidden;
   font-family: 'Gotham Pro Light Italic', Helvetica, sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
   color: #000000;
-  display: none;
+  opacity: 0;
+  height: 0;
   transition: visibility 0s, opacity 0.5s linear;
 
   ol {
     list-style: decimal;
+    padding: 50px 0;
     li {
       display: list-item;
       list-style-position: inside;

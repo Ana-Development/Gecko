@@ -163,6 +163,106 @@
                     </ol>
                 </div>
             </div>
+            <div class="partners__item">
+                <div class="partners__item-group">
+                    <div class="partners__title">Брест</div>
+                    <div class="union-group partners__item-button collapsible">
+                        <img class="icon_arrow" src="../assets/img/Union.png" alt="img-collapsed">
+                        <img class="icon_closed" src="../assets/img/closed.png" alt="img-closed">
+                    </div>
+                </div>
+                <div class="content">
+                    <ol type="1">
+                        <li>Марковская Елена, Ольга Зуйко
+                            <br/>Адрес: ул.Комсомольская, 18
+                            <br/>
+                            +375447870253
+                            <br/>
+                            https://www.instagram.com/me_cosmetology/
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="partners__item">
+                <div class="partners__item-group">
+                    <div class="partners__title">Могилев</div>
+                    <div class="union-group partners__item-button collapsible">
+                        <img class="icon_arrow" src="../assets/img/Union.png" alt="img-collapsed">
+                        <img class="icon_closed" src="../assets/img/closed.png" alt="img-closed">
+                    </div>
+                </div>
+                <div class="content">
+                    <ol type="1">
+                        <li>Марковская Елена, Ольга Зуйко
+                            <br/>Адрес: ул.Комсомольская, 18
+                            <br/>
+                            +375447870253
+                            <br/>
+                            https://www.instagram.com/me_cosmetology/
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="partners__item">
+                <div class="partners__item-group">
+                    <div class="partners__title">Витебск</div>
+                    <div class="union-group partners__item-button collapsible">
+                        <img class="icon_arrow" src="../assets/img/Union.png" alt="img-collapsed">
+                        <img class="icon_closed" src="../assets/img/closed.png" alt="img-closed">
+                    </div>
+                </div>
+                <div class="content">
+                    <ol type="1">
+                        <li>Марковская Елена, Ольга Зуйко
+                            <br/>Адрес: ул.Комсомольская, 18
+                            <br/>
+                            +375447870253
+                            <br/>
+                            https://www.instagram.com/me_cosmetology/
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="partners__item">
+                <div class="partners__item-group">
+                    <div class="partners__title">Гомель</div>
+                    <div class="union-group partners__item-button collapsible">
+                        <img class="icon_arrow" src="../assets/img/Union.png" alt="img-collapsed">
+                        <img class="icon_closed" src="../assets/img/closed.png" alt="img-closed">
+                    </div>
+                </div>
+                <div class="content">
+                    <ol type="1">
+                        <li>Марковская Елена, Ольга Зуйко
+                            <br/>Адрес: ул.Комсомольская, 18
+                            <br/>
+                            +375447870253
+                            <br/>
+                            https://www.instagram.com/me_cosmetology/
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="partners__item">
+                <div class="partners__item-group">
+                    <div class="partners__title">Гродно</div>
+                    <div class="union-group partners__item-button collapsible">
+                        <img class="icon_arrow" src="../assets/img/Union.png" alt="img-collapsed">
+                        <img class="icon_closed" src="../assets/img/closed.png" alt="img-closed">
+                    </div>
+                </div>
+                <div class="content">
+                    <ol type="1">
+                        <li>Марковская Елена, Ольга Зуйко
+                            <br/>Адрес: ул.Комсомольская, 18
+                            <br/>
+                            +375447870253
+                            <br/>
+                            https://www.instagram.com/me_cosmetology/
+                        </li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -173,11 +273,17 @@
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
             var content = this.parentNode.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
+            if (content.style.opacity === "1") {
+                content.style.opacity = "0";
+                content.style.visibility = "hidden";
+                content.style.height = "0";
                 this.classList.remove('icon_collapsed');
-            } else {
-                content.style.display = "block";
+            }
+            else {
+                content.style.opacity = "1";
+                content.style.visibility = "visible";
+                content.style.height = "100%";
+
                 this.classList.add('icon_collapsed');
             }
         });
