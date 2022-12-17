@@ -1,5 +1,5 @@
 .partners {
-  background: #F6F6F6;
+  background: $main-color;
   &__logo {
     margin-top: 100px;
     margin-bottom: 50px;
@@ -28,6 +28,7 @@
 
       .partners__title {
         margin-bottom: 0;
+        text-align: left;
       }
     }
   }
@@ -40,6 +41,7 @@
     color: #2C2A25;
     background-color: inherit;
     margin-bottom: 148px;
+    text-align: center;
   }
 
   .union-group {
@@ -81,7 +83,6 @@
   }
 }
 
-/* Style the collapsible content. Note: hidden by default */
 .content {
   overflow: hidden;
   font-family: 'Gotham Pro Light Italic', Helvetica, sans-serif;
@@ -89,9 +90,20 @@
   font-size: 24px;
   line-height: 32px;
   color: #000000;
-  opacity: 0;
-  height: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+
+  &.m-fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility 0s linear 0.5s, opacity 0.5s;
+  }
+
+  &.m-fadeIn {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    transition: visibility 0s linear 0s, opacity 0.5s;
+  }
 
   ol {
     list-style: decimal;
@@ -102,16 +114,4 @@
       margin-bottom: 32px;
     }
   }
-}
-
-.expandable {
-  padding-top: 10px;
-  /* overflow set to hidden to hide the expanded text */
-  overflow: hidden;
-  /* all style changes will ease-in-out for 1s */
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s;
 }

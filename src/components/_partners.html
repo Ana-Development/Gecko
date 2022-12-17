@@ -11,7 +11,7 @@
                         <img class="icon_closed" src="../assets/img/closed.png">
                     </div>
                 </div>
-                <div class="content">
+                <div class="content m-fadeOut">
                     <ol type="1">
                         <li>Марковская Елена, Ольга Зуйко
                             <br/>Адрес: ул.Комсомольская, 18
@@ -91,7 +91,7 @@
                         <img class="icon_closed" src="../assets/img/closed.png" alt="img-closed">
                     </div>
                 </div>
-                <div class="content">
+                <div class="content m-fadeOut">
                     <ol type="1">
                         <li>Марковская Елена, Ольга Зуйко
                             <br/>Адрес: ул.Комсомольская, 18
@@ -171,7 +171,7 @@
                         <img class="icon_closed" src="../assets/img/closed.png" alt="img-closed">
                     </div>
                 </div>
-                <div class="content">
+                <div class="content m-fadeOut">
                     <ol type="1">
                         <li>Марковская Елена, Ольга Зуйко
                             <br/>Адрес: ул.Комсомольская, 18
@@ -191,7 +191,7 @@
                         <img class="icon_closed" src="../assets/img/closed.png" alt="img-closed">
                     </div>
                 </div>
-                <div class="content">
+                <div class="content m-fadeOut">
                     <ol type="1">
                         <li>Марковская Елена, Ольга Зуйко
                             <br/>Адрес: ул.Комсомольская, 18
@@ -211,7 +211,7 @@
                         <img class="icon_closed" src="../assets/img/closed.png" alt="img-closed">
                     </div>
                 </div>
-                <div class="content">
+                <div class="content m-fadeOut">
                     <ol type="1">
                         <li>Марковская Елена, Ольга Зуйко
                             <br/>Адрес: ул.Комсомольская, 18
@@ -231,7 +231,7 @@
                         <img class="icon_closed" src="../assets/img/closed.png" alt="img-closed">
                     </div>
                 </div>
-                <div class="content">
+                <div class="content m-fadeOut">
                     <ol type="1">
                         <li>Марковская Елена, Ольга Зуйко
                             <br/>Адрес: ул.Комсомольская, 18
@@ -251,7 +251,7 @@
                         <img class="icon_closed" src="../assets/img/closed.png" alt="img-closed">
                     </div>
                 </div>
-                <div class="content">
+                <div class="content m-fadeOut">
                     <ol type="1">
                         <li>Марковская Елена, Ольга Зуйко
                             <br/>Адрес: ул.Комсомольская, 18
@@ -273,19 +273,17 @@
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
             var content = this.parentNode.nextElementSibling;
-            if (content.style.opacity === "1") {
-                content.style.opacity = "0";
-                content.style.visibility = "hidden";
-                content.style.height = "0";
+            if (content.classList.contains('m-fadeIn')) {
+                content.classList.remove('m-fadeIn');
+                content.classList.add('m-fadeOut');
                 this.classList.remove('icon_collapsed');
             }
             else {
-                content.style.opacity = "1";
-                content.style.visibility = "visible";
-                content.style.height = "100%";
-
+                content.classList.remove('m-fadeOut');
+                content.classList.add('m-fadeIn');
                 this.classList.add('icon_collapsed');
             }
+
         });
     }
 </script>
