@@ -1,4 +1,9 @@
 .carousel {
+  -webkit-transition-duration: 700ms;
+  -moz-transition-duration: 700ms;
+  -o-transition-duration: 700ms;
+  transition-duration: 700ms;
+
   &__caption {
     position: absolute;
     top: 70px;

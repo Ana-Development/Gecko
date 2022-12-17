@@ -85,7 +85,7 @@
 
 .content {
   overflow: hidden;
-  font-family: 'Gotham Pro Light Italic', Helvetica, sans-serif;
+  @include italic;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
@@ -111,7 +111,9 @@
     li {
       display: list-item;
       list-style-position: inside;
-      margin-bottom: 32px;
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
     }
   }
 }

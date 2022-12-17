@@ -34,3 +34,9 @@
   font-weight: 400;
 }
 
+@mixin italic {
+  font-family: 'Gotham Pro Light Italic', Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+

@@ -46,6 +46,10 @@ body {
     color: #FFFFFF;
 }
 
+.bold {
+    @include bold;
+}
+
 p {
     line-height: 25px;
     letter-spacing: 0.005em;
