@@ -9,6 +9,9 @@
   &__about {
     display: flex;
     align-items: center;
+    img {
+      display: block;
+    }
   }
   &__info {
     display: flex;
@@ -36,14 +39,19 @@
     }
   }
   &__more {
-    border-top: 1px solid #939393;
-    margin-top: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
     span {
       display: block;
+      border-top: 1px solid #939393;
       @include italic;
       font-size: 24px;
       line-height: 115%;
       padding: 30px 0 30px 0;
+    }
+    .product__more-img img {
+      margin: 0;
     }
   }
   img {
@@ -52,8 +60,14 @@
   }
 
   @for $i from 1 through list.length($card-overlay-colors) {
-    &.product-#{$i} [class*="title"]{
-      color: list.nth($card-overlay-colors, $i);
+    &.product-#{$i} {
+      [class*="title"] {
+        color: list.nth($card-overlay-colors, $i);
+      }
+
+      .union-group {
+        background: list.nth($card-overlay-colors, $i);
+      }
     }
   }
 }

@@ -5,109 +5,125 @@
 $main-container-width: breakpoint('xl');
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    @include light;
-    font-size: 16px;
-    line-height: 15px;
-    scroll-behavior: smooth;
+  @include light;
+  font-size: 16px;
+  line-height: 15px;
+  scroll-behavior: smooth;
 }
 
 .header {
-    border-bottom: 1px solid #939393;
-    background: $main-color;
+  border-bottom: 1px solid #939393;
+  background: $main-color;
 }
 
 .container {
-    max-width: breakpoint('xl');
-    margin: 0 auto;
+  max-width: breakpoint('xl');
+  margin: 0 auto;
 }
 
 .title {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .about, .products {
-    @include regular;
-    font-size: 24px;
-    line-height: 23px;
+  @include regular;
+  font-size: 24px;
+  line-height: 23px;
 }
 
 .text-bold {
-    @include bold;
-    font-size: 24px;
-    line-height: 25px;
-    letter-spacing: 0.005em;
+  @include bold;
+  font-size: 24px;
+  line-height: 25px;
+  letter-spacing: 0.005em;
 }
 
 .text-white {
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 .bold {
-    @include bold;
+  @include bold;
 }
 
 p {
-    line-height: 25px;
-    letter-spacing: 0.005em;
+  line-height: 25px;
+  letter-spacing: 0.005em;
+}
+
+.union-group {
+  display: flex;
+  justify-content: center;
+  width: 55.54px;
+  height: 55.54px;
+  align-items: center;
+  border-radius:50%;
 }
 
 .app__chat-btn {
-    position: fixed;
-    bottom: max(calc(((100vw - #{$main-container-width})/2 - 255px)/2), 20px);
-    right: max(calc(((100vw - #{$main-container-width})/2 - 255px)/2), 20px);
-    width: 255px;
-    height: 82px;
-    z-index: 10001;
+  display: none;
+  position: fixed;
+  bottom: max(calc(((100vw - #{$main-container-width}) / 2 - 255px) / 2), 20px);
+  right: max(calc(((100vw - #{$main-container-width}) / 2 - 255px) / 2), 20px);
+  width: 255px;
+  height: 82px;
+  z-index: 10001;
 
-    background: #1D1D1B;
-    border-radius: 48px;
-    border-style: none;
-    span {
-        @include bold;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 100%;
-        color: #F4F4F4;
-    }
+  background: #1D1D1B;
+  border-radius: 48px;
+  border-style: none;
+
+  span {
+    @include bold;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 100%;
+    color: #F4F4F4;
+  }
 }
 
 @media (max-width: breakpoint('sm')) {
-    .app__chat-btn {
-        width: 218px;
-        height: 70px;
-        span {
-            font-size: 20px;
-        }
+  .app__chat-btn {
+    width: 218px;
+    height: 70px;
+
+    span {
+      font-size: 20px;
     }
+  }
 }
 
 @media (max-width: breakpoint('xl')) {
-    .xl-d-none {
-        display: none;
-    }
-    .container {
-        max-width: 900px;
-    }
+  .xl-d-none {
+    display: none;
+  }
+  .container {
+    max-width: 900px;
+  }
 }
 
 @media (max-width: breakpoint('lg')) {
-    .container {
-        max-width: 700px;
-    }
+  .container {
+    max-width: 700px;
+  }
 }
 
 @media (max-width: breakpoint('md')) {
-    .container {
-        max-width: 500px;
-    }
+  .container {
+    max-width: 500px;
+  }
 }
 
 @media (max-width: breakpoint('sm')) {
-    .container {
-        max-width: 320px;
-    }
+  .container {
+    max-width: 320px;
+  }
+}
+
+.async-hide {
+  opacity: 0;
 }
