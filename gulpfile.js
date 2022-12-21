@@ -6,21 +6,21 @@ let path = {
     html: project_folder + '/',
     css: project_folder + '/css/',
     js: project_folder + '/js/',
-    img: project_folder + '/assets/img/',
+    img: project_folder + '/assets/',
     fonts: project_folder + '/assets/fonts/'
   },
   src: {
     html: [source_folder + '/*.html', source_folder + '/pages/*/*.html', "!" + source_folder + '/_*.html'],
     css: source_folder + '/scss/style.scss',
     js: source_folder + '/js/*.js',
-    img: source_folder + '/assets/img/**/*.{jpg,png,svg,gif,ico,webp}',
+    img: source_folder + '/assets/*/**/*.{jpg,png,svg,gif,ico,webp}',
     fonts: source_folder + '/assets/fonts/*.ttf'
   },
   watch: {
     html: source_folder + '/**/*.html',
     css: source_folder + '/scss/**/*.scss',
     js: source_folder + '/js/**/*.js',
-    img: source_folder + '/assets/img/**/*.{jpg,png,svg,gif,ico,webp}'
+    img: source_folder + '/assets/**/**/*.{jpg,png,svg,gif,ico,webp}'
   },
   clean: './' + project_folder + '/'
 }
@@ -65,7 +65,6 @@ function browserSync(params) {
 function html() {
   return src(path.src.html)
     .pipe(fileinclude())
-    .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream())
 }
