@@ -142,6 +142,10 @@
       &:not(:last-child) {
         margin-bottom: 32px;
       }
+      a {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+      }
     }
   }
 }

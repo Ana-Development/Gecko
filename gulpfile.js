@@ -67,7 +67,7 @@ function html() {
     .pipe(fileinclude())
     .pipe(webphtml())
     .pipe(dest(path.build.html))
-    //.pipe(browsersync.stream())
+    .pipe(browsersync.stream())
 }
 
 function css() {
