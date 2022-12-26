@@ -11,11 +11,35 @@
     align-items: center;
     img {
       display: block;
+        margin-top: 120px;
+        margin-bottom: 57px;
+    }
+    @media (max-width: breakpoint('xl')) {
+      flex-direction: column;
     }
   }
-  &__info {
+  &__intro {
     display: flex;
     flex-direction: column;
+    height: 570px;
+  }
+  &__note {
+    letter-spacing: -0.025em;
+  }
+  &__info {
+    .title {
+      @include light;
+     margin-top: 3.5rem;
+    }
+    .title_1 {
+      line-height: 120%;
+    }
+    p {
+      @include light;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
   }
   &__title {
     @include regular;
@@ -42,9 +66,9 @@
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
+    height: 100%;
     span {
       display: block;
-      border-top: 1px solid #939393;
       @include italic;
       font-size: 24px;
       line-height: 115%;
@@ -53,14 +77,26 @@
     .product__more-img img {
       margin: 0;
     }
+    &-inner {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      border-top: 1px solid #939393;
+    }
   }
-  img {
-    margin-top: 120px;
-    margin-bottom: 57px;
+  &__show-more {
+    display: none;
+    position: absolute;
+    width: 589px;
+    height: 1215px;
+
+    background: #FFFFFF;
+    border-radius: 45px;
   }
 
   @for $i from 1 through list.length($card-overlay-colors) {
-    &.product-#{$i} {
+    .product-#{$i} {
       [class*="title"] {
         color: list.nth($card-overlay-colors, $i);
       }
@@ -68,6 +104,9 @@
       .union-group {
         background: list.nth($card-overlay-colors, $i);
       }
+    }
+    .product__info .product-#{$i} {
+        color: list.nth($card-overlay-colors, $i);
     }
   }
 }
