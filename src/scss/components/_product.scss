@@ -20,7 +20,7 @@
     &-img {
       display: block;
       margin-left: -55px;
-      margin-right: 67px;
+      margin-right: 62px;
     }
 
     @media (max-width: breakpoint('xl')) {
@@ -82,7 +82,7 @@
   }
 
   &__description {
-    @include regular;
+    @include light;
     line-height: 20px;
     color: #939393;
 
@@ -130,7 +130,7 @@
     border-radius: 45px;
     top: 100px;
     border: 1px solid #939393;
-    padding: 33px 33px 33px 33px;
+    padding: 33px;
     margin: auto 0;
     left: -33px;
 
