@@ -5,9 +5,9 @@ function currentDiv(n) {
 }
 
 function showDivs(n) {
-    var i;
-    var items = document.getElementsByClassName("carousel__item");
-    var dots = document.querySelectorAll(".carousel__indicators button");
+    let i;
+    const items = document.getElementsByClassName("carousel__item");
+    const dots = document.querySelectorAll(".carousel__indicators button");
     if (n > items.length) {
         slideIndex = 1
     }
@@ -22,7 +22,11 @@ function showDivs(n) {
 }
 
 let slideShowIndex = 0;
-showSlides();
+
+const items = document.getElementsByClassName("carousel__item");
+if (items.length > 0) {
+    showSlides();
+}
 
 function showSlides() {
     if (slideShowIndex > 4) {
