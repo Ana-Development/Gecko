@@ -50,9 +50,21 @@ body {
   @include bold;
 }
 
+.black {
+  @include black;
+}
+
 p {
   line-height: 25px;
   letter-spacing: 0.005em;
+}
+
+.title_md {
+  line-height: 115%;
+}
+
+.title_xl {
+  line-height: 120%;
 }
 
 .union-group {

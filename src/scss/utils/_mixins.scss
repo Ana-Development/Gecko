@@ -28,6 +28,12 @@
   font-weight: 700;
 }
 
+@mixin black {
+  font-family: 'Gotham Pro Black', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
 @mixin medium {
   font-family: 'Gotham Pro Medium', Helvetica, sans-serif;
   font-style: normal;

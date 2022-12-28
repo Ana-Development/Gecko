@@ -1,72 +1,104 @@
 @use "sass:list";
 
 .product {
-  background: $main-color;
+  .product__main {
+    background: $main-color;
+  }
+
   &__path {
     @include light;
-    padding-top: 19px;
+    padding-top: 2rem;
   }
+
   &__about {
     display: flex;
     align-items: center;
-    img {
+    margin-top: 61px;
+    padding-bottom: 61px;
+    margin-bottom: 3rem;
+
+    &-img {
       display: block;
-        margin-top: 120px;
-        margin-bottom: 57px;
+      margin-left: -55px;
+      margin-right: 67px;
     }
+
     @media (max-width: breakpoint('xl')) {
       flex-direction: column;
     }
   }
+
   &__intro {
     display: flex;
     flex-direction: column;
-    height: 570px;
+    min-height: 570px;
+    .product__title {
+      padding-top: 55px;
+    }
   }
+
   &__note {
     letter-spacing: -0.025em;
+    padding-bottom: 1rem;
+    .bold {
+      @include regular;
+    }
   }
+
   &__info {
     .title {
       @include light;
-     margin-top: 3.5rem;
+      padding-top: 3.2rem;
     }
-    .title_1 {
-      line-height: 120%;
-    }
+
     p {
       @include light;
       font-size: 24px;
       line-height: 30px;
     }
 
+    p:last-child {
+      padding-bottom: 55px;
+    }
+
+    img {
+      margin-bottom: 55px;
+      margin-top: 40px;
+    }
   }
+
   &__title {
     @include regular;
     font-size: 40px;
     line-height: 38px;
     margin-bottom: 0.81rem;
   }
+
   &__subtitle {
     @include light;
     font-size: 24px;
     line-height: 115%;
     margin-bottom: 2rem;
   }
+
   &__description {
     @include regular;
     line-height: 20px;
     color: #939393;
-    .bold {
+
+    .black {
       font-size: 24px;
       line-height: 30px;
     }
   }
+
   &__more {
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
     height: 100%;
+    flex: 1;
+
     span {
       display: block;
       @include italic;
@@ -74,25 +106,47 @@
       line-height: 115%;
       padding: 30px 0 30px 0;
     }
+
     .product__more-img img {
       margin: 0;
     }
+
     &-inner {
       display: flex;
       align-items: center;
       width: 100%;
       justify-content: space-between;
       border-top: 1px solid #939393;
+      position: relative;
     }
   }
+
   &__show-more {
     display: none;
     position: absolute;
-    width: 589px;
-    height: 1215px;
+    width: 100%;
 
     background: #FFFFFF;
     border-radius: 45px;
+    top: 100px;
+    border: 1px solid #939393;
+    padding: 33px 33px 33px 33px;
+    margin: auto 0;
+    left: -33px;
+
+    &-img {
+      margin: 0 0 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+
+    >* {
+      @include italic;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: initial;
+    }
   }
 
   @for $i from 1 through list.length($card-overlay-colors) {
@@ -106,7 +160,7 @@
       }
     }
     .product__info .product-#{$i} {
-        color: list.nth($card-overlay-colors, $i);
+      color: list.nth($card-overlay-colors, $i);
     }
   }
 }
