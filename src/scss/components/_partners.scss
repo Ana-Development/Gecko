@@ -1,3 +1,5 @@
+$partners-width: 700px;
+
 .partners {
   background: $main-color;
   &__logo {
@@ -11,12 +13,6 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-
-  @media (max-width: breakpoint('xl')) {
-    .union-group.icon_collapsed {
-      margin-right: calc((100% - 900px/2)/2);
-    }
-  }
 
   @media (max-width: breakpoint('lg')) {
       .union-group.icon_collapsed {
@@ -44,6 +40,10 @@
     align-items: center;
     border-top: 1px solid #939393;
     padding-bottom: 50px;
+
+    @media (min-width: breakpoint('lg')) {
+      min-width: 700px;
+    }
 
     &-group {
       display: flex;
@@ -76,7 +76,7 @@
     width: 55.54px;
     height: 55.54px;
     align-items: center;
-    border-radius:50%;
+    border-radius: 50%;
     background: #939393;
     transform: rotate(-180deg);
   }
@@ -105,7 +105,7 @@
     }
     position: fixed;
     bottom: 0;
-    margin-right: calc((100% - 1140px/2)/2);
+    margin-right: calc((100% - 700px)/2);
     margin-bottom: 20px;
     z-index: 1000;
   }
@@ -118,6 +118,13 @@
   font-size: 24px;
   line-height: 32px;
   color: #000000;
+
+  li a {
+    display: block;
+    text-overflow: ellipsis; /* enables ellipsis */
+    white-space: nowrap; /* keeps the text in a single line */
+    overflow: hidden; /* keeps the element from overflowing its parent */
+  }
 
   &.m-fadeOut {
     visibility: hidden;
