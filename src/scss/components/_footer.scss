@@ -37,6 +37,7 @@ footer {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
+
     }
 
     &__main-logo {
@@ -83,6 +84,15 @@ footer {
       flex-basis: 50%;
     }
 
+    @media (max-width: breakpoint('lg')) {
+      &__left-block {
+        flex-basis: 100%;
+      }
+      &__right-block {
+        flex-basis: 100%;
+      }
+    }
+
     @media (max-width: breakpoint('xl')) {
       &__left-block {
         flex-basis: 30%;
@@ -107,14 +117,16 @@ footer {
       &__copyright-block {
         font-size: 16px;
       }
+
     }
-    @media (max-width: breakpoint('sm')) {
+    @media (max-width: breakpoint('lg')) {
       &__inner {
         flex-wrap: wrap;
         justify-content: center;
       }
       &__menu-list {
         flex-direction: column;
+        align-items: flex-end;
       }
       &__menu-item {
         margin-top: 0.5rem;
