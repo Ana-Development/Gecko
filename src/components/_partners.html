@@ -92,6 +92,21 @@
     </div>
 </section>
 <script>
+    function onScroll() {
+        const footer = document.querySelector('footer');
+        const bounds = footer.getBoundingClientRect();
+        const closedIcons = document.querySelectorAll('.partners__item .union-group.icon_collapsed');
+        closedIcons.forEach(icon => {
+            if (bounds.top >= 0 && bounds.bottom <= window.innerHeight + footer.offsetHeight) {
+                icon.style.opacity = '0'
+            }
+            else {
+                icon.style.opacity = '1'
+            }
+        });
+    }
+
+    window.onscroll = onScroll;
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -102,6 +117,7 @@
                 content.classList.remove('m-fadeIn');
                 content.classList.add('m-fadeOut');
                 this.classList.remove('icon_collapsed');
+                this.parentElement.scrollIntoView();
             }
             else {
                 content.classList.remove('m-fadeOut');
