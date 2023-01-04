@@ -45,6 +45,10 @@ $partners-width: 700px;
       min-width: 700px;
     }
 
+    @media (max-width: breakpoint('sm')) {
+      width: 80%;
+    }
+
     &-group {
       display: flex;
       height: 82px;
