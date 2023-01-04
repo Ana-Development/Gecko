@@ -147,3 +147,11 @@ p {
   top: -9999px;
   left: -9999px;
 }
+.hyphenate {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
