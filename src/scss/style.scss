@@ -140,3 +140,10 @@ p {
 .async-hide {
   opacity: 0;
 }
+
+/* seo friendly */
+.hidden {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
